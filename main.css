@@ -226,7 +226,7 @@ a {
     text-align: center;
     font-size: 32px;
     margin-bottom: 40px;
-    color: var(--text-dark);
+    color: var(--text-light);
 }
 
 .projects {
