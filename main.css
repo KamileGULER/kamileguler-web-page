@@ -170,7 +170,7 @@ a {
     align-items: center;
     min-height: 100vh;
     padding: 4rem 2rem;
-    background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('img/ben.jpg');
+    background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('ben.jpg');
     background-size: cover;
     background-position: center;
     color: var(--text-light);
