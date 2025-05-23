@@ -1,0 +1,71 @@
+:root {
+    --bg: #1f1f1f;
+    --card: #2c2c2c;
+    --text: #eeeeee;
+    --accent:#2e69a4;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  
+  .cv-container {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: var(--card);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2.2em;
+    color: var(--accent);
+  }
+  
+  header p {
+    margin-top: 0.5em;
+    font-style: italic;
+  }
+  
+  .section {
+    margin-top: 1.5rem;
+  }
+  
+  .section h2 {
+    color: var(--accent);
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 0.3rem;
+  }
+  
+  ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+  }
+  
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  footer {
+    margin-top: 2rem;
+    text-align: right;
+    font-size: 0.85em;
+    color: #ccc;
+  }
+  
