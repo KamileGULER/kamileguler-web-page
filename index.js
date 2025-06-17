@@ -37,3 +37,16 @@ function toggleFullText(button) {
         button.textContent = isEnglish ? 'Read More' : 'Devamını Oku';
     }
 }
+
+function setLanguage(lang) {
+  localStorage.setItem("lang", lang); // dil kaydı
+  for (const key in translations[lang]) {
+    const el = document.getElementById(key);
+    if (el) el.innerHTML = translations[lang][key];
+  }
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  const savedLang = localStorage.getItem("lang") || "tr";
+  setLanguage(savedLang);
+});

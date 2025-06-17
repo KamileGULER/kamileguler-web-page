@@ -5,50 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Döndü Kamile GÜLER | Özgeçmiş</title>
   <link rel="stylesheet" href="resume.css">
+  <style>
+    .language-switcher {
+      text-align: right;
+      margin: 10px;
+    }
+    .language-switcher button {
+      margin-left: 5px;
+      padding: 5px 10px;
+    }
+  </style>
 </head>
 <body>
+  <div class="text-center mt-4">
+    <a href="CVKamıleGULER.pdf" download class="btn btn-primary">
+      <i class="fas fa-download"></i> Download CV
+    </a>
+  </div>
+
   <div class="cv-container">
+    <div class="language-switcher">
+      <button onclick="setLanguage('tr')">Türkçe</button>
+      <button onclick="setLanguage('en')">English</button>
+    </div>
+
     <header>
-      <h1>Döndü Kamile GÜLER</h1>
-      <p>Bilgisayar Mühendisliği 2. Sınıf Öğrencisi</p>
+      <h1 id="name">Döndü Kamile GÜLER</h1>
+      <p id="title">Bilgisayar Mühendisliği 3. Sınıf Öğrencisi</p>
     </header>
 
     <section class="section about">
-      <h2>Hakkımda</h2>
-      <p>
-        Karabük Üniversitesi Bilgisayar Mühendisliği 2. sınıf öğrencisiyim. Eğitim sürecimde projeler ve kurslarla kendimi geliştiriyor, üniversitemin bilgi işlem biriminde ve teknokentte gönüllü olarak yer alıyorum. Yeni teknolojilere ilgi duyuyorum.
-      </p>
+      <h2 id="about-title">Hakkımda</h2>
+      <p id="about-text">Karabük Üniversitesi Bilgisayar Mühendisliği 3. sınıf öğrencisiyim. Eğitim sürecimde projeler ve kurslarla kendimi geliştiriyor, üniversitemin bilgi işlem biriminde ve teknokentte gönüllü olarak yer alıyorum. Yeni teknolojilere ilgi duyuyorum.</p>
     </section>
 
     <section class="section">
-      <h2>İletişim</h2>
+      <h2 id="contact-title">İletişim</h2>
       <ul>
-        <li><strong>Telefon:</strong> 0553 183 89 13</li>
-        <li><strong>Email:</strong> <a href="mailto:kamile.guler32@gmail.com">kamile.guler32@gmail.com</a></li>
-        <li><strong>Adres:</strong> Gülevler Mah. 106. Cad. No:174 Kat:5 Daire:10</li>
-        <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/kamile-güler-b56580273">kamile-güler-b56580273</a></li>
+        <li><strong id="phone-label">Telefon:</strong> 0553 183 89 13</li>
+        <li><strong id="email-label">Email:</strong> <a href="mailto:kamile.guler32@gmail.com" id="email-link">kamile.guler32@gmail.com</a></li>
+        <li><strong id="linkedin-label">LinkedIn:</strong> <a href="https://linkedin.com/in/kamile-güler-b56580273" id="linkedin-link">kamile-güler-b56580273</a></li>
       </ul>
     </section>
 
     <section class="section">
-      <h2>Eğitim</h2>
-      <p>Karabük Üniversitesi - Bilgisayar Mühendisliği (2022 - 2027)</p>
+      <h2 id="education-title">Eğitim</h2>
+      <p id="education-text">Karabük Üniversitesi - Bilgisayar Mühendisliği (2022 - 2027)</p>
     </section>
 
     <section class="section">
-      <h2>Projeler ve Başarılar</h2>
-      <ul>
+      <h2 id="projects-title">Projeler ve Başarılar</h2>
+      <ul id="projects-list">
         <li><strong>Chatbot:</strong> Karabük Üniversitesi web sayfası için geliştirildi.</li>
         <li><strong>IDEATHON:</strong> SosyalFest'te 2.lik ödülü.</li>
-        <li><strong>TÜBİTAK 1001:</strong> Danışman: Dr. İsa AVCI</li>
-        <li><strong>TÜBİTAK 2209-A:</strong> Yanardağ farkındalık projesi</li>
         <li><strong>E-Sağlık Projesi:</strong> Danışman: Dr. M. Ali YETGİN</li>
       </ul>
     </section>
 
     <section class="section">
-      <h2>Lisanslar & Sertifikalar</h2>
-      <ul>
+      <h2 id="certificates-title">Lisanslar & Sertifikalar</h2>
+      <ul id="certificates-list">
         <li>Python Eğitimi - 2025-01-19</li>
         <li>AR-GE Projeleri - 2024-02-20</li>
         <li>Scratch & Algoritma - 2024-08</li>
@@ -59,8 +75,8 @@
     </section>
 
     <section class="section">
-      <h2>Beceriler</h2>
-      <ul>
+      <h2 id="skills-title">Beceriler</h2>
+      <ul id="skills-list">
         <li>Programlama: Python, Java, C</li>
         <li>Robotik Kodlama, Algoritma</li>
         <li>İngilizce: Orta Seviye (B2)</li>
@@ -68,16 +84,60 @@
     </section>
 
     <section class="section">
-      <h2>Referanslar</h2>
-      <ul>
-        <li><strong>Yrd. Doç. Dr. M. Ali YETGİN</strong> – m.ali.yetgin@karabuk.edu.tr – 0532 156 46 80</li>
-        <li><strong>Dr. Öğr. Üyesi İsa AVCI</strong> – isaavci@karabuk.edu.tr – 0370 418 8178</li>
+      <h2 id="references-title">Referanslar</h2>
+      <ul id="references-list">
+        <li><strong>Yrd. Doç. Dr. M. Ali YETGİN</strong> – m.ali.yetgin@karabuk.edu.tr</li>
+        <li><strong>Dr. Öğr. Üyesi İsa AVCI</strong> – isaavci@karabuk.edu.tr</li>
       </ul>
     </section>
 
     <footer>
-      <p>&copy; 2025 Döndü Kamile GÜLER</p>
+      <p id="footer-text">&copy; 2025 Döndü Kamile GÜLER</p>
     </footer>
   </div>
+
+  <script>
+    const translations = {
+      en: {
+        "title": "3rd Year Computer Engineering Student",
+        "about-title": "About Me",
+        "about-text": "I am a 3rd-year Computer Engineering student at Karabük University. I enhance my skills through projects and courses and volunteer at the university's IT department and technopark. I am interested in new technologies.",
+        "contact-title": "Contact",
+        "phone-label": "Phone:",
+        "email-label": "Email:",
+        "linkedin-label": "LinkedIn:",
+        "education-title": "Education",
+        "education-text": "Karabük University - Computer Engineering (2022 - 2027)",
+        "projects-title": "Projects and Achievements",
+        "certificates-title": "Licenses & Certificates",
+        "skills-title": "Skills",
+        "references-title": "References",
+        "footer-text": "&copy; 2025 Döndü Kamile GÜLER"
+      },
+      tr: {
+        "title": "Bilgisayar Mühendisliği 3. Sınıf Öğrencisi",
+        "about-title": "Hakkımda",
+        "about-text": "Karabük Üniversitesi Bilgisayar Mühendisliği 3. sınıf öğrencisiyim. Eğitim sürecimde projeler ve kurslarla kendimi geliştiriyor, üniversitemin bilgi işlem biriminde ve teknokentte gönüllü olarak yer alıyorum. Yeni teknolojilere ilgi duyuyorum.",
+        "contact-title": "İletişim",
+        "phone-label": "Telefon:",
+        "email-label": "Email:",
+        "linkedin-label": "LinkedIn:",
+        "education-title": "Eğitim",
+        "education-text": "Karabük Üniversitesi - Bilgisayar Mühendisliği (2022 - 2027)",
+        "projects-title": "Projeler ve Başarılar",
+        "certificates-title": "Lisanslar & Sertifikalar",
+        "skills-title": "Beceriler",
+        "references-title": "Referanslar",
+        "footer-text": "&copy; 2025 Döndü Kamile GÜLER"
+      }
+    };
+
+    function setLanguage(lang) {
+      for (const key in translations[lang]) {
+        const el = document.getElementById(key);
+        if (el) el.innerHTML = translations[lang][key];
+      }
+    }
+  </script>
 </body>
 </html>
