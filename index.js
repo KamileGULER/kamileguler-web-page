@@ -3,7 +3,6 @@ function toggleMenu() {
     menu.classList.toggle('show');
 }
 
-// Close menu when clicking outside
 document.addEventListener('click', function(event) {
     const menu = document.querySelector('.menu-items');
     const toggle = document.querySelector('.nav-toggle');
@@ -39,7 +38,7 @@ function toggleFullText(button) {
 }
 
 function setLanguage(lang) {
-  localStorage.setItem("lang", lang); // dil kaydı
+  localStorage.setItem("lang", lang); 
   for (const key in translations[lang]) {
     const el = document.getElementById(key);
     if (el) el.innerHTML = translations[lang][key];
