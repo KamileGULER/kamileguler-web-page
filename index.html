@@ -684,6 +684,169 @@
             color: white;
         }
 
+        /* Blog Section */
+        .blog {
+            background: #F6FAFD;
+            padding: 100px 0;
+        }
+
+        .blog-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .blog-header h2 {
+            color: #0A1931;
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .blog-subtitle {
+            color: #4A7FA7;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(74, 127, 167, 0.1);
+            transition: all 0.3s;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(74, 127, 167, 0.2);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, #4A7FA7, #1A3D63);
+            object-fit: cover;
+            display: block;
+        }
+
+        .blog-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-date {
+            color: #4A7FA7;
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .blog-title {
+            color: #0A1931;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            line-height: 1.3;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .blog-excerpt {
+            color: #4A7FA7;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .blog-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: auto;
+            padding-top: 15px;
+            border-top: 1px solid rgba(74, 127, 167, 0.1);
+        }
+
+        .blog-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .blog-tag {
+            background: rgba(74, 127, 167, 0.1);
+            color: #4A7FA7;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .blog-read-more {
+            color: #1A3D63;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.3s;
+        }
+
+        .blog-card:hover .blog-read-more {
+            color: #4A7FA7;
+            transform: translateX(5px);
+        }
+
+        .blog-loading {
+            text-align: center;
+            padding: 60px 20px;
+            color: #4A7FA7;
+            font-size: 1.1rem;
+        }
+
+        .blog-error {
+            text-align: center;
+            padding: 60px 20px;
+            color: #d32f2f;
+            font-size: 1.1rem;
+        }
+
+        .blog-empty {
+            text-align: center;
+            padding: 60px 20px;
+            color: #4A7FA7;
+            font-size: 1.1rem;
+        }
+
+        .blog-cta {
+            text-align: center;
+            margin-top: 50px;
+        }
+
         /* Footer */
         footer {
             background: #0A1931;
@@ -764,6 +927,14 @@
                 padding: 10px 20px;
                 font-size: 0.9rem;
             }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .blog-header h2 {
+                font-size: 1.8rem;
+            }
         }
     </style>
 </head>
@@ -776,6 +947,7 @@
                 <li><a href="#technologies">Teknolojiler</a></li>
                 <li><a href="#about">Hakkımda</a></li>
                 <li><a href="#projects">Projelerim</a></li>
+                <li><a href="#blog">Yazılarım</a></li>
                 <li><a href="#footer-container">İletişim</a></li>
             </ul>
         </nav>
@@ -1011,6 +1183,26 @@
                 </div>
             </div>
         </section>
+
+        <section id="blog" class="blog">
+            <div class="container">
+                <div class="blog-header">
+                    <h2>Medium Yazılarım</h2>
+                    <p class="blog-subtitle">Teknoloji, yazılım geliştirme ve öğrenme sürecim hakkında yazdığım yazılar</p>
+                </div>
+                <div id="blog-container">
+                    <div class="blog-loading">
+                        <i class="fas fa-spinner fa-spin" style="font-size: 2rem; margin-bottom: 15px; display: block;"></i>
+                        Yazılar yükleniyor...
+                    </div>
+                </div>
+                <div class="blog-cta">
+                    <a href="https://medium.com/@kamile.guler32" target="_blank" class="cta-button">
+                        <i class="fab fa-medium"></i> Tüm Yazılarımı Oku
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -1236,6 +1428,113 @@
                     }
                 });
             }
+        });
+
+        // Medium Blog Posts Loader
+        async function loadMediumPosts() {
+            const blogContainer = document.getElementById('blog-container');
+            const mediumUsername = 'kamile.guler32';
+            const rssUrl = `https://medium.com/feed/@${mediumUsername}`;
+            
+            // RSS2JSON API kullanarak RSS feed'i parse ediyoruz (CORS sorununu çözmek için)
+            const rss2jsonApi = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
+            
+            try {
+                const response = await fetch(rss2jsonApi);
+                const data = await response.json();
+                
+                if (data.status === 'ok' && data.items && data.items.length > 0) {
+                    // En son 3 yazıyı göster
+                    const posts = data.items.slice(0, 3);
+                    
+                    blogContainer.innerHTML = '<div class="blog-grid"></div>';
+                    const blogGrid = blogContainer.querySelector('.blog-grid');
+                    
+                    posts.forEach(post => {
+                        // Tarih formatla
+                        const pubDate = new Date(post.pubDate);
+                        const formattedDate = pubDate.toLocaleDateString('tr-TR', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric'
+                        });
+                        
+                        // HTML içeriğini temizle ve özet oluştur
+                        // post.description kontrolü eklendi - eğer yoksa varsayılan metin kullan
+                        const rawDescription = post.description || post.content || '';
+                        const description = rawDescription
+                            .replace(/<[^>]*>/g, '') // HTML taglarını kaldır
+                            .substring(0, 150) + (rawDescription.length > 150 ? '...' : '');
+                        
+                        // Görsel URL'sini çıkar
+                        let imageUrl = '';
+                        if (rawDescription) {
+                            const imgMatch = rawDescription.match(/<img[^>]+src="([^"]+)"/);
+                            if (imgMatch) {
+                                imageUrl = imgMatch[1];
+                            }
+                        }
+                        
+                        // Blog kartı oluştur
+                        const blogCard = document.createElement('a');
+                        blogCard.href = post.link;
+                        blogCard.target = '_blank';
+                        blogCard.rel = 'noopener noreferrer';
+                        blogCard.className = 'blog-card';
+                        
+                        blogCard.innerHTML = `
+                            ${imageUrl ? `<img src="${imageUrl}" alt="${post.title}" class="blog-image" onerror="this.style.display='none'">` : ''}
+                            <div class="blog-content">
+                                <div class="blog-date">
+                                    <i class="far fa-calendar"></i>
+                                    ${formattedDate}
+                                </div>
+                                <h3 class="blog-title">${post.title}</h3>
+                                <p class="blog-excerpt">${description}</p>
+                                <div class="blog-footer">
+                                    <div class="blog-tags">
+                                        ${post.categories && post.categories.length > 0 
+                                            ? post.categories.slice(0, 2).map(cat => `<span class="blog-tag">${cat}</span>`).join('')
+                                            : '<span class="blog-tag">Yazılım</span>'
+                                        }
+                                    </div>
+                                    <span class="blog-read-more">
+                                        Oku <i class="fas fa-arrow-right"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        `;
+                        
+                        blogGrid.appendChild(blogCard);
+                    });
+                } else {
+                    blogContainer.innerHTML = `
+                        <div class="blog-empty">
+                            <i class="fas fa-book-open" style="font-size: 3rem; margin-bottom: 20px; display: block; color: #4A7FA7;"></i>
+                            <p>Henüz yazı bulunmuyor.</p>
+                            <p style="margin-top: 10px; font-size: 0.9rem;">Medium hesabınızda yazılarınızı paylaştığınızda burada görünecektir.</p>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                console.error('Medium yazıları yüklenirken hata oluştu:', error);
+                blogContainer.innerHTML = `
+                    <div class="blog-error">
+                        <i class="fas fa-exclamation-triangle" style="font-size: 2rem; margin-bottom: 15px; display: block;"></i>
+                        <p>Yazılar yüklenirken bir hata oluştu.</p>
+                        <p style="margin-top: 10px; font-size: 0.9rem;">
+                            <a href="https://medium.com/@kamile.guler32" target="_blank" style="color: #4A7FA7; text-decoration: underline;">
+                                Medium hesabıma git
+                            </a>
+                        </p>
+                    </div>
+                `;
+            }
+        }
+
+        // Sayfa yüklendiğinde Medium yazılarını yükle
+        document.addEventListener('DOMContentLoaded', function() {
+            loadMediumPosts();
         });
     </script>
 </body>
