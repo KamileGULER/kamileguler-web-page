@@ -1,28 +1,38 @@
-# Kamile GÜLER - Resume Page
+# Kamile Guler - Portfolio Redesign
 
-Kişisel portföy ve özgeçmiş sayfası.
+This repository now contains the Phase 1 migration of the portfolio into a `Vite + React + TypeScript + Tailwind CSS` application.
 
-## Özellikler
+## What Changed
 
-- Modern ve responsive tasarım
-- Teknoloji bilgileri
-- Projeler bölümü
-- Medium yazıları entegrasyonu
-- İletişim bilgileri
+- Preserved the original single-file site as `legacy/index.legacy.html`
+- Rebuilt the root app with a new component architecture
+- Added a premium dark design system and responsive layout foundation
+- Implemented the Phase 1 boot sequence, navigation, universe background, hero, and content-preserving preview sections
 
-## Teknolojiler
+## Stack
 
-- HTML5
-- CSS3
-- JavaScript (Vanilla)
+- Vite
+- React
+- TypeScript
+- Tailwind CSS
+- GSAP + ScrollTrigger
+- Three.js + React Three Fiber
+- Framer Motion
+- Lucide React
 
-## GitHub Pages ile Yayınlama
+## Run
 
-1. Bu projeyi GitHub'a yükleyin
-2. Repository Settings > Pages bölümüne gidin
-3. Source olarak "main" branch'ini seçin
-4. Sayfa birkaç dakika içinde yayınlanacaktır
+```bash
+pnpm install
+pnpm dev
+```
 
-## Canlı Demo
+## Build
 
-[GitHub Pages Linki](https://[kullanıcı-adınız].github.io/Resume_Page/)
+```bash
+pnpm build
+```
+
+## GitHub Pages
+
+The Vite config uses `base: "./"` so the production build stays compatible with GitHub Pages project-path deployments.
