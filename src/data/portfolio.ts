@@ -108,13 +108,10 @@ export const hero = {
 };
 
 export const codeIdentity = [
-  "const engineer = {",
-  '  name: "Kamile Guler",',
-  "  focus: [",
-  '    "Software",',
-  '    "AI",',
-  '    "Quantum"',
-  "  ]",
+  "const greeting = {",
+  '  hello: "Selam, ben Kamile",',
+  '  role: "Software · AI · Quantum",',
+  '  status: "welcome()"',
   "};",
 ];
 

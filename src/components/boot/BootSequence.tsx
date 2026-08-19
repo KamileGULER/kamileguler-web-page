@@ -3,13 +3,7 @@ import { motion } from "framer-motion";
 import { usePrefersReducedMotion } from "../../hooks/usePrefersReducedMotion";
 
 const bootLines = [
-  "> initializing portfolio...",
-  "> loading identity...",
-  "> loading projects...",
-  "> loading research...",
-  "> building digital environment...",
-  "",
-  "> render_universe()",
+  "> Hello I'm Kamile ",
 ];
 
 type BootSequenceProps = {

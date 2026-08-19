@@ -52,7 +52,7 @@ export function NavBar({ activeSection, sectionIndex }: NavBarProps) {
             </ul>
           </nav>
 
-          <div className="rounded-full border border-cyan/20 bg-cyan/10 px-4 py-2 font-mono text-xs tracking-[0.36em] text-cyan">
+          <div className="whitespace-nowrap rounded-full border border-cyan/20 bg-cyan/10 px-4 py-2 font-mono text-xs tracking-[0.36em] text-cyan">
             {String(sectionIndex).padStart(2, "0")} / {String(navItems.length).padStart(2, "0")}
           </div>
         </div>
@@ -79,7 +79,7 @@ export function NavBar({ activeSection, sectionIndex }: NavBarProps) {
             className="mx-4 rounded-[2rem] border border-white/10 bg-[#070B10]/95 p-4 shadow-glow backdrop-blur lg:hidden"
           >
             <div className="mb-4 flex items-center justify-between border-b border-white/10 pb-4">
-              <span className="font-mono text-xs tracking-[0.4em] text-cyan">
+              <span className="whitespace-nowrap font-mono text-xs tracking-[0.4em] text-cyan">
                 {String(sectionIndex).padStart(2, "0")} / {String(navItems.length).padStart(2, "0")}
               </span>
               <span className="text-sm text-muted">Navigation</span>

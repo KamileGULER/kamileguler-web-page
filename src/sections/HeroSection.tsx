@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
-import { hero } from "../data/portfolio";
+import { codeIdentity, hero } from "../data/portfolio";
 import { fadeUp } from "../animations/variants";
 import { MagneticButton } from "../components/ui/MagneticButton";
 import { usePrefersReducedMotion } from "../hooks/usePrefersReducedMotion";
@@ -47,34 +47,24 @@ export function HeroSection({ ready }: HeroSectionProps) {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(92,225,230,0.08),transparent_32%),radial-gradient(circle_at_70%_20%,rgba(120,108,246,0.12),transparent_30%),linear-gradient(180deg,rgba(5,7,10,0.2),rgba(5,7,10,0.92))]" />
       <div className="absolute inset-0 bg-hero-grid bg-[length:72px_72px] opacity-[0.06]" />
 
-      <div className="relative z-10 mx-auto grid w-full max-w-7xl gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+      <div className="relative z-10 mx-auto grid w-full max-w-7xl gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
         <div className="space-y-8">
           <div className="hero-reveal space-y-5">
             <p className="font-mono text-[11px] uppercase tracking-[0.5em] text-cyan">DIGITAL UNIVERSE</p>
-            <div className="space-y-2">
+            <h1 className="flex flex-wrap items-baseline gap-x-6 text-[13vw] font-semibold leading-[0.88] tracking-[-0.08em] text-ink sm:text-[4.4rem] lg:text-[6rem]">
               {hero.name.map((line) => (
-                <h1
-                  key={line}
-                  className="text-[18vw] font-semibold leading-[0.88] tracking-[-0.08em] text-ink sm:text-[5.8rem] lg:text-[8rem]"
-                >
-                  {line}
-                </h1>
+                <span key={line}>{line}</span>
               ))}
-            </div>
+            </h1>
           </div>
 
           <motion.div
             variants={fadeUp}
             initial={prefersReducedMotion ? "visible" : "hidden"}
             animate={ready ? "visible" : "hidden"}
-            className="hero-reveal grid max-w-3xl gap-5 lg:grid-cols-[0.65fr_1fr]"
+            className="hero-reveal max-w-3xl"
           >
-            <div>
-              <p className="font-mono text-xs uppercase tracking-[0.42em] text-muted">{hero.role}</p>
-              <p className="mt-2 font-mono text-xs uppercase tracking-[0.42em] text-cyan/80">{hero.meta}</p>
-            </div>
-
-            <p className="max-w-xl text-base leading-8 text-ink/74 sm:text-lg">{hero.statement}</p>
+            <p className="text-base leading-8 text-ink/74 sm:text-lg">{hero.statement}</p>
           </motion.div>
 
           <div className="hero-reveal flex flex-col items-start gap-4 sm:flex-row">

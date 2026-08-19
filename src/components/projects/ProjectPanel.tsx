@@ -68,14 +68,14 @@ export function ProjectPanel({ project, reverse = false, onOpen }: ProjectPanelP
     >
       <div
         ref={panelRef}
-        className="project-surface group relative overflow-hidden rounded-[1.75rem] border border-white/8 bg-black/20 transition duration-300"
+        className="project-surface group relative self-start overflow-hidden rounded-[1.75rem] border border-white/8 bg-black/20 transition duration-300"
         onMouseMove={handlePointerMove}
         onMouseLeave={handlePointerLeave}
       >
         <div className="project-glow pointer-events-none absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100" />
         <div
           ref={mediaRef}
-          className="relative flex min-h-[320px] items-center justify-center overflow-hidden rounded-[1.65rem] bg-[radial-gradient(circle_at_top,rgba(92,225,230,0.14),transparent_36%),linear-gradient(180deg,rgba(10,15,21,0.9),rgba(7,10,15,1))] transition duration-300"
+          className="relative flex aspect-[2/1] items-center justify-center overflow-hidden rounded-[1.65rem] bg-[radial-gradient(circle_at_top,rgba(92,225,230,0.14),transparent_36%),linear-gradient(180deg,rgba(10,15,21,0.9),rgba(7,10,15,1))] transition duration-300"
         >
           {project.image ? (
             <div ref={imageRef} className="h-full w-full transition duration-500">
