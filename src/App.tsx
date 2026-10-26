@@ -8,6 +8,7 @@ import { AboutSection } from "./sections/AboutSection";
 import { ExperienceSection } from "./sections/ExperienceSection";
 import { ProjectsSection } from "./sections/ProjectsSection";
 import { ResearchSection } from "./sections/ResearchSection";
+import { WebsitesSection } from "./sections/WebsitesSection";
 import { WorldsSection } from "./sections/WorldsSection";
 import { useActiveSection } from "./hooks/useActiveSection";
 import { navItems } from "./data/portfolio";
@@ -35,6 +36,7 @@ function App() {
         <HeroSection ready={bootComplete} />
         <WorldsSection />
         <ProjectsSection />
+        <WebsitesSection />
         <ExperienceSection />
         <ResearchSection />
         <AboutSection />

@@ -40,7 +40,7 @@ export function ExperienceSection() {
     <section id="experience" ref={sectionRef} className="relative px-4 py-24 sm:px-6 lg:px-10">
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 flex flex-col gap-5 lg:max-w-3xl">
-          <p className="font-mono text-[11px] uppercase tracking-[0.5em] text-cyan">05 / EXPERIENCE</p>
+          <p className="font-mono text-[11px] uppercase tracking-[0.5em] text-cyan">06 / EXPERIENCE</p>
           <h2 className="text-3xl font-semibold tracking-[-0.05em] text-ink sm:text-5xl">
             Research, leadership, software practice, and academic progress.
           </h2>

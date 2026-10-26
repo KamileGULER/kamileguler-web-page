@@ -79,10 +79,22 @@ export type Project = {
   note?: string;
 };
 
+export type Website = {
+  id: string;
+  name: string;
+  category: string;
+  summary: string;
+  technologies: string[];
+  liveUrl: string;
+  githubUrl?: string;
+  image?: string;
+};
+
 export const navItems: NavItem[] = [
   { id: "index", label: "INDEX" },
   { id: "work", label: "WORK" },
   { id: "projects", label: "PROJECTS" },
+  { id: "websites", label: "SITES" },
   { id: "experience", label: "EXPERIENCE" },
   { id: "research", label: "RESEARCH" },
   { id: "about", label: "ABOUT" },
@@ -101,7 +113,7 @@ export const hero = {
   },
   secondaryCta: {
     label: "GITHUB",
-    href: "https://github.com",
+    href: "https://github.com/KamileGULER",
   },
   status: "SCROLL TO EXPLORE",
   portrait: "./img/ben.jpg",
@@ -144,36 +156,8 @@ export const worlds: World[] = [
 
 export const projects: Project[] = [
   {
-    id: "qr-memory-site",
-    number: "PROJECT_01",
-    name: "QR ile Ani Birakma Sitesi",
-    category: "Website / First Version",
-    summary:
-      "A responsive website where event guests can quickly share photos and memories through a QR code.",
-    description:
-      "This project was built with HTML5, CSS3, and JavaScript so participants can access a shared page by QR code and leave memories and photos from their phones.",
-    technologies: ["HTML", "CSS", "JavaScript", "QR Code"],
-    highlights: [
-      "Responsive mobile-friendly layout",
-      "Modern and clean interface",
-      "CSS Grid and Flexbox usage",
-      "Smooth scrolling and animations",
-      "SEO-oriented structure",
-      "Fast loading experience",
-    ],
-    image: "./img/wedding3.png",
-    imageAlt: "QR ile Ani Birakma Sitesi interface",
-    media: [
-      { type: "image", src: "./img/wedding5.png", alt: "Photo and message upload screen" },
-      { type: "image", src: "./img/wedding4.png", alt: "Shared gallery experience" },
-      { type: "image", src: "./img/QRkart.jpg", alt: "QR card design" },
-    ],
-    links: [],
-    note: "Its live, expanded continuation appears as Anforya.",
-  },
-  {
     id: "anforya",
-    number: "PROJECT_02",
+    number: "PROJECT_01",
     name: "Anforya",
     category: "Live Product",
     summary:
@@ -209,7 +193,7 @@ export const projects: Project[] = [
   },
   {
     id: "rag-chatbot",
-    number: "PROJECT_03",
+    number: "PROJECT_02",
     name: "RAG Chatbot",
     category: "AI / NLP",
     summary:
@@ -236,8 +220,8 @@ export const projects: Project[] = [
   },
   {
     id: "todo-list",
-    number: "PROJECT_04",
-    name: "Todo List Uygulamasi",
+    number: "PROJECT_03",
+    name: "Todo List Application",
     category: "Web Application",
     summary:
       "A modern task management application built with React and FastAPI, including light and dark theme support.",
@@ -263,8 +247,8 @@ export const projects: Project[] = [
   },
   {
     id: "data-communication",
-    number: "PROJECT_05",
-    name: "Veri Iletisimi Simulasyonu",
+    number: "PROJECT_04",
+    name: "Data Communication Simulation",
     category: "Network Programming",
     summary:
       "A Python socket simulation for sender-server-receiver communication with parity-based error detection.",
@@ -282,6 +266,29 @@ export const projects: Project[] = [
       { label: "GitHub Repository", href: "https://github.com/KamileGULER/datacomProject", kind: "github" },
     ],
     note: "Sender -> Server -> Receiver",
+  },
+];
+
+export const websites: Website[] = [
+  {
+    id: "taskflow",
+    name: "TaskFlow",
+    category: "Task Management",
+    summary:
+      "A task management web app for planning work, tracking progress across to-do, in-progress, and done states, and filtering tasks at a glance.",
+    technologies: ["React", "Vite", "JavaScript", "LocalStorage"],
+    liveUrl: "https://taskmanagementtweb.netlify.app/",
+    githubUrl: "https://github.com/KamileGULER/Task_Management_Web",
+  },
+  {
+    id: "basgardiyan",
+    name: "Bas Gardiyan",
+    category: "Product Catalog",
+    summary:
+      "A product catalog website for an electrical and electronics supplier, presenting lighting, switches, cables, and switchgear by category and brand.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    liveUrl: "https://basgardian.netlify.app/",
+    githubUrl: "https://github.com/KamileGULER/ProductsCatalog",
   },
 ];
 
@@ -369,8 +376,8 @@ export const writingLinks: WritingLink[] = [
 
 export const socials: SocialLink[] = [
   { label: "Email", href: "mailto:kamile.guler32@gmail.com", icon: Mail },
-  { label: "LinkedIn", href: "https://www.linkedin.com", icon: Globe },
-  { label: "GitHub", href: "https://github.com", icon: BriefcaseBusiness },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/kamile-g%C3%BCler-b56580273/", icon: Globe },
+  { label: "GitHub", href: "https://github.com/KamileGULER", icon: BriefcaseBusiness },
   { label: "Medium", href: "https://medium.com/@kamile.guler32", icon: NotebookPen },
 ];
 
